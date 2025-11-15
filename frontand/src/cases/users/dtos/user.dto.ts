@@ -6,6 +6,8 @@ export interface userDTO {
     hasMFA: boolean;
 
     factoryId?: string;
-    isMFAValidated?: boolean;
-    isFirstMFAAccess?: boolean;
+    isMfaValidated?: boolean;
+    isFirstMfaAccess?: boolean;
+    
+    
 }

@@ -5,15 +5,23 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({length: 60, nullable: false})
+  @Column({ length: 60, nullable: false })
   name: string;
 
-  @Column({nullable: false})
+  @Column({ nullable: false })
   email: string;
 
-  @Column({type: 'uuid', nullable: false, unique: true})
+  @Column({ type: 'uuid', nullable: false, unique: true })
   supabaseId: string;
 
-  @Column({default: false})
+  @Column({ default: false })
   hasMFA: boolean;
+
+ 
+  @Column({ default: false })
+  isMfaSetupComplete: boolean;
+
+
+  @Column({ default: true })
+  mfaFactorId: string;
 }
